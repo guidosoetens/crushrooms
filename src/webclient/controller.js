@@ -69,17 +69,13 @@ function initController() {
     while(slots.length < 6)
         addControllerSlot();
 
-    // controllerDiv.onclick = function () {
-    //     console.log("click!");
-    // };
-
     updateControllerLayout();
 }
 
 function updateControllerLayout() {
 
     var width = controllerDiv.offsetWidth;
-    var height = controllerDiv.offsetHeight - 100; //reduce size to compensate for bottom overlay
+    var height = controllerDiv.offsetHeight; //reduce size to compensate for bottom overlay
 
     var btmHeight = height * (3.0 / 5.0);
     var btmHorStep = width / 6.0;

@@ -1,8 +1,24 @@
+// disable scrolling
+window.addEventListener('scroll', function noscroll() {  window.scrollTo( 0, 0 ); return false; });
+
+
+function updateGlobalLayout() {
+    body = document.getElementById('body');
+    body.style.width = window.innerWidth + "px";
+    body.style.height = (window.innerHeight)  + "px";
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    //var width = controllerDiv.offsetWidth;
+    //var height = controllerDiv.offsetHeight - 100; //reduce size to compensate for bottom overlay
+}
+
+
 window.onresize = function(event) {
+    updateGlobalLayout();
     updateControllerLayout();
 }
 
 window.onload = function(event) {
+    updateGlobalLayout();
     initController();
 
     // var id = setInterval(animateLoader, 1);
