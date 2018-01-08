@@ -1,3 +1,47 @@
+window.onresize = function(event) {
+    updateControllerLayout();
+}
+
+window.onload = function(event) {
+    initController();
+
+    // var id = setInterval(animateLoader, 1);
+    // var animTime = 0;
+    // var shroomDiv = document.getElementById('shroomDiv');
+    // function animateLoader() {
+    //     animTime += 0.005;
+    //     if(animTime > 1.0)
+    //         animTime = 0;
+        
+    //     var deg = 5 * Math.sin(animTime * 2 * Math.PI);
+
+    //     shroomDiv.style.webkitTransform = 'rotate('+deg+'deg)'; 
+    //     shroomDiv.style.mozTransform    = 'rotate('+deg+'deg)'; 
+    //     shroomDiv.style.msTransform     = 'rotate('+deg+'deg)'; 
+    //     shroomDiv.style.oTransform      = 'rotate('+deg+'deg)'; 
+    //     shroomDiv.style.transform       = 'rotate('+deg+'deg)'; 
+    // }
+
+    // function requestFullScreen(element) {
+    //     // Supports most browsers and their versions.
+    //     var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+    
+    //     if (requestMethod) { // Native full screen.
+    //         requestMethod.call(element);
+    //     } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+    //         var wscript = new ActiveXObject("WScript.Shell");
+    //         if (wscript !== null) {
+    //             wscript.SendKeys("{F11}");
+    //         }
+    //     }
+    // }
+    
+    // var elem = document.body; // Make the body go full screen.
+    // requestFullScreen(elem);
+}
+
+
+/*
 var socket;
 var isIdle = true;
 var isClosed = false;
@@ -205,3 +249,4 @@ function prepareConnection() {
 function sendToServer(message) {
     socket.send(message);
 };
+*/
